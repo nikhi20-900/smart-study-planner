@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Smart Study Planner</title>
+    <link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+    <a href="index.html" class="back-home">← Back to Home</a>
+    
+    <div class="auth-container">
+        <div class="auth-card">
+            <div class="auth-header">
+                <div class="auth-logo">📋</div>
+                <h1>Create Account</h1>
+                <p>Start your smart study journey today</p>
+            </div>
+
+            <div class="error-message" id="errorMessage"></div>
+            <div class="success-message" id="successMessage"></div>
+
+            <form id="signupForm">
+                <div class="form-group">
+                    <label for="username">
+                        <span>👤</span> Username
+                    </label>
+                    <input 
+                        type="text" 
+                        id="username" 
+                        name="username" 
+                        placeholder="Enter your username (min 3 characters)"
+                        required
+                        autocomplete="username"
+                        minlength="3"
+                    >
+                    <small class="form-hint">Must be at least 3 characters</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">
+                        <span>🔒</span> Password
+                    </label>
+                    <div class="password-wrapper">
+                        <input 
+                            type="password" 
+                            id="password" 
+                            name="password" 
+                            placeholder="Create a password (min 6 characters)"
+                            required
+                            autocomplete="new-password"
+                            minlength="6"
+                        >
+                        <button type="button" class="toggle-password" id="togglePassword" onclick="togglePasswordVisibility()">
+                            👁️
+                        </button>
+                    </div>
+                    <small class="form-hint">Must be at least 6 characters</small>
+                    <div class="password-strength" id="passwordStrength"></div>
+                </div>
+
+                <button type="submit" class="auth-button" id="signupButton">
+                    <span class="button-text">Create Account</span>
+                    <span class="button-loader" style="display: none;">⏳</span>
+                </button>
+            </form>
+
+            <div class="auth-footer">
+                <p>Already have an account? <a href="login.html">Login here</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/auth.js"></script>
+    <script>
+        // Initialize signup form
+        document.getElementById('signupForm').addEventListener('submit', handleSignup);
+        
+        // Password strength checker
+        document.getElementById('password').addEventListener('input', function() {
+            const password = this.value;
+            const strengthDiv = document.getElementById('passwordStrength');
+            
+            if (password.length === 0) {
+                strengthDiv.textContent = '';
+                strengthDiv.className = 'password-strength';
+                return;
+            }
+            
+            let strength = 0;
+            if (password.length >= 6) strength++;
+            if (password.length >= 8) strength++;
+            if (/[a-z]/.test(password) && /[A-Z]/.test(password)) strength++;
+            if (/[0-9]/.test(password)) strength++;
+            if (/[^a-zA-Z0-9]/.test(password)) strength++;
+            
+            if (strength <= 2) {
+                strengthDiv.textContent = 'Weak password';
+                strengthDiv.className = 'password-strength weak';
+            } else if (strength <= 3) {
+                strengthDiv.textContent = 'Medium strength';
+                strengthDiv.className = 'password-strength medium';
+            } else {
+                strengthDiv.textContent = 'Strong password';
+                strengthDiv.className = 'password-strength strong';
+            }
+        });
+        
+        // Toggle password visibility
+        function togglePasswordVisibility() {
+            const passwordInput = document.getElementById('password');
+            const toggleBtn = document.getElementById('togglePassword');
+            
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                toggleBtn.textContent = '🙈';
+            } else {
+                passwordInput.type = 'password';
+                toggleBtn.textContent = '👁️';
+            }
+        }
+    </script>
+</body>
+</html>
