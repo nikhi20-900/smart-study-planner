@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Study Planner - Study Smarter, Not Harder</title>
+    <link rel="stylesheet" href="css/landing.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">📋</span>
+                <span class="logo-text">Smart Study Planner</span>
+            </div>
+            <div class="nav-links" id="navLinks">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#how-it-works" class="nav-link">How It Works</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="signup.html" class="get-started-btn">Get Started</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Study Smarter, Not Harder 📚</h1>
+                <p class="hero-subtitle">Automatically plan your syllabus, track progress, and never miss a deadline.</p>
+                <a href="signup.html" class="cta-button">Get Started</a>
+            </div>
+            <div class="hero-illustration">
+                <svg class="student-illustration" viewBox="0 0 600 500" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Desk -->
+                    <rect x="50" y="350" width="500" height="20" rx="5" fill="#8B5A3C"/>
+                    <rect x="50" y="350" width="500" height="100" fill="#A67C52"/>
+                    
+                    <!-- Laptop -->
+                    <rect x="200" y="280" width="200" height="120" rx="5" fill="#1F2937"/>
+                    <rect x="210" y="290" width="180" height="100" fill="#F9FAFB"/>
+                    <rect x="220" y="300" width="160" height="8" rx="2" fill="#7C3AED"/>
+                    <rect x="220" y="315" width="160" height="8" rx="2" fill="#EC4899"/>
+                    <rect x="220" y="330" width="120" height="8" rx="2" fill="#34D399"/>
+                    
+                    <!-- Books Stack -->
+                    <rect x="100" y="320" width="60" height="80" rx="3" fill="#7C3AED"/>
+                    <rect x="105" y="315" width="60" height="80" rx="3" fill="#EC4899"/>
+                    <rect x="110" y="310" width="60" height="80" rx="3" fill="#34D399"/>
+                    
+                    <!-- Student (simplified) -->
+                    <circle cx="400" cy="200" r="50" fill="#FDD9B5"/>
+                    <ellipse cx="400" cy="280" rx="80" ry="100" fill="#7C3AED"/>
+                    <path d="M 350 250 Q 400 230 450 250" stroke="#1F2937" stroke-width="3" fill="none"/>
+                    
+                    <!-- Lamp -->
+                    <rect x="450" y="200" width="8" height="150" fill="#1F2937"/>
+                    <ellipse cx="454" cy="200" rx="30" ry="15" fill="#F9FAFB"/>
+                    <circle cx="454" cy="200" r="25" fill="#FFD700" opacity="0.6"/>
+                    
+                    <!-- Calendar on wall -->
+                    <rect x="500" y="100" width="80" height="100" rx="5" fill="#F9FAFB" stroke="#1F2937" stroke-width="2"/>
+                    <rect x="510" y="110" width="60" height="20" fill="#7C3AED"/>
+                    <circle cx="520" cy="150" r="8" fill="#EC4899"/>
+                    <circle cx="540" cy="150" r="8" fill="#34D399"/>
+                    <circle cx="560" cy="150" r="8" fill="#7C3AED"/>
+                    
+                    <!-- Notes/Paper -->
+                    <rect x="120" y="280" width="50" height="60" rx="2" fill="#F9FAFB" stroke="#1F2937" stroke-width="1"/>
+                    <line x1="130" y1="295" x2="160" y2="295" stroke="#1F2937" stroke-width="1"/>
+                    <line x1="130" y1="310" x2="150" y2="310" stroke="#1F2937" stroke-width="1"/>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section" id="features">
+        <div class="container">
+            <h2 class="section-title">Features</h2>
+            <div class="features-grid">
+                <div class="feature-card" data-aos="fade-up">
+                    <div class="feature-icon">📅</div>
+                    <h3>Automatic Daily Study Plan</h3>
+                    <p>Generates a personalized study schedule based on your syllabus and deadlines.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-delay="100">
+                    <div class="feature-icon">📊</div>
+                    <h3>Progress Tracking</h3>
+                    <p>Tracks your study progress with visual indicators and percentage completion.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-delay="200">
+                    <div class="feature-icon">⏰</div>
+                    <h3>Deadline Alerts</h3>
+                    <p>Notifies you as deadlines approach so you stay ahead and avoid last-minute cramming.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-delay="300">
+                    <div class="feature-icon">💡</div>
+                    <h3>Easy to Use Interface</h3>
+                    <p>Simple, user-friendly interface designed for quick and efficient study planning.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="container">
+            <h2 class="section-title">How It Works</h2>
+            <div class="steps-container">
+                <div class="step" data-aos="zoom-in">
+                    <div class="step-number">1</div>
+                    <div class="step-icon">📝</div>
+                    <h4>Add Subjects</h4>
+                    <p>Enter your subjects and total number of topics for each.</p>
+                </div>
+                <div class="step-arrow">→</div>
+                <div class="step" data-aos="zoom-in" data-delay="200">
+                    <div class="step-number">2</div>
+                    <div class="step-icon">📆</div>
+                    <h4>Set Topics & Deadlines</h4>
+                    <p>Set topics to cover and deadlines for each subject.</p>
+                </div>
+                <div class="step-arrow">→</div>
+                <div class="step" data-aos="zoom-in" data-delay="400">
+                    <div class="step-number">3</div>
+                    <div class="step-icon">✅</div>
+                    <h4>Get Daily Study Plan</h4>
+                    <p>Receive a daily plan that specifies what topics to study.</p>
+                </div>
+                <div class="step-arrow">→</div>
+                <div class="step" data-aos="zoom-in" data-delay="600">
+                    <div class="step-number">4</div>
+                    <div class="step-icon">📈</div>
+                    <h4>Track Progress</h4>
+                    <p>Update your progress and monitor completion percentages.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <h2 class="section-title">About</h2>
+            <div class="about-content" data-aos="fade-up">
+                <h3>Smart Study Planner</h3>
+                <p>Helping students manage their study time effectively with personalized plans and progress tracking. Our mission is to make studying more organized, efficient, and stress-free.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 <em>Smart Study Planner</em></p>
+        </div>
+    </footer>
+
+    <script src="js/landing.js"></script>
+</body>
+</html>

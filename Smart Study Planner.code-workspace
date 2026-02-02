@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../../Smart Study Planner"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "smart-study-planner"
+	}
+}
